@@ -12,6 +12,7 @@ services:
     tty: true
     stdin_open: true
   db:
+    platform: linux/x86_64
     image: mysql:5.7
     volumes:
       - db-volume:/var/lib/mysql
@@ -19,4 +20,3 @@ services:
       MYSQL_ROOT_PASSWORD: password
 volumes:
   db-volume:
-
